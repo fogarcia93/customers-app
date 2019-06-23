@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import HomeContainer from "./containers/HomeContainer";
+import CustomersContainers from "./containers/CustomersContainers";
 
 class App extends Component {
   renderHome = () => <h1>Home</h1>;
@@ -17,7 +18,7 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={HomeContainer} ></Route>
-          <Route exact path="/customers" component={this.renderCustomerListContainer} ></Route>
+          <Route exact path="/customers" component={CustomersContainers} ></Route>
           <Switch>
               <Route  path="/customers/new" component={this.renderCustomerNewContainer} ></Route>
               <Route  path="/customers/:dni" component={this.renderCustomerContainer} ></Route>
