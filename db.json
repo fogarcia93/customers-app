@@ -1,16 +1,19 @@
 {
   "customers": [
     {
+      "id": "1234",
       "dni": "1234",
-      "name": "Fred Garcia",
-      "age": 25
+      "name": "Orlando Garcia",
+      "age": "29"
     },
     {
+      "id": "5678",
       "dni": "5678",
       "name": "Stef Garcia",
       "age": 27
     },
     {
+      "id": "1234",
       "dni": "9012",
       "name": "Toby Kawasaki",
       "age": 27
