@@ -8,6 +8,8 @@ import CustomerEdit from "./../components/CustomerEdit";
 import CustomerData from "./../components/CustomerData";
 import { fetchCustomers } from "./../actions/fetchCustomers";
 import { updateCustomer } from "./../actions/updateCustomer";
+import { SubmissionError } from 'redux-form';
+
 
 class CustomerContainer extends Component {
   componentDidMount() {
@@ -16,12 +18,15 @@ class CustomerContainer extends Component {
     }
   }
 
-  handleSubmit = values => {
-    console.log(JSON.stringify(values));
-
-    const { id } = values;
-    return this.props.updateCustomer(id, values);
-  };
+    handleSubmit = values => {
+        console.log(JSON.stringify(values));
+        const { id } = values; 
+        return this.props.updateCustomer(id, values).then( r => {
+            if (r.error) {
+                throw new SubmissionError(r.payload);
+            }
+        });
+    }
 
   handleOnBack = () => {
     this.props.history.goBack();
