@@ -20,12 +20,17 @@ class CustomerContainer extends Component {
     console.log(JSON.stringify(values));
 
     const { id } = values;
-    this.props.updateCustomer(id, values);
+    return this.props.updateCustomer(id, values);
   };
 
   handleOnBack = () => {
     this.props.history.goBack();
   };
+
+  handleSubmitSuccess = ()=>{
+    this.props.history.goBack();
+  }
+
   renderBody = () => (
     <Route
       path="/customers/:dni/edit"
@@ -36,6 +41,7 @@ class CustomerContainer extends Component {
             <CustomerControl
               {...this.props.customer}
               onSubmit={this.handleSubmit}
+              onSubmitSuccess={this.handleSubmitSuccess}
               onBack={this.handleOnBack}
             />
           );
