@@ -13,11 +13,10 @@ class HomeContainer extends Component {
     return (
       <div>
         <AppFrame
-          header="Home"
+          header="Inicio"
           body={
             <div>
-              Esta es la pantalla inicial
-              <CustomersActions>
+                  <img src="https://i.udemycdn.com/course/750x422/1374394_f1a8_2.jpg" alt=""/>              <CustomersActions>
                   <button onClick={this.handleOnClick}>Listado de Clientes</button>
               </CustomersActions>
             </div>
