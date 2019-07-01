@@ -3,7 +3,7 @@
     {
       "id": "1234",
       "dni": "1234",
-      "name": "CARLO",
+      "name": "CARLOS PE",
       "age": 327
     },
     {
@@ -17,6 +17,24 @@
       "dni": "9012",
       "name": "Toby Kawasaki",
       "age": 27
+    },
+    {
+      "id": "HeRImLV",
+      "dni": "9090",
+      "name": "NUEVO",
+      "age": 10
+    },
+    {
+      "id": "gXkn6nB",
+      "dni": "334567",
+      "name": "BENJI",
+      "age": 7
+    },
+    {
+      "id": "zVRAFLO",
+      "dni": "0987",
+      "name": "NUEVOHOLA",
+      "age": 5
     }
   ],
   "posts": [
